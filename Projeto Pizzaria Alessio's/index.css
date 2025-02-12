@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primary: #ffa500;
+    --cor-dark: #232323;
+    --cor-light: #eaeaea;
+    --color-white: #fff;
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    color: var(--cor-primary);
+}
+
+header {
+    background-color: var(--cor-dark);
+    color: var(--color-white);
+    padding: 1.5rem 0;
+    position: fixed;
+    /* Mantém fixo no topo */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Garante que fique sobre outros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    /* Espaçamento maior entre os links */
+    padding: 0 2rem;
+}
+
+nav li {
+    display: inline;
+    margin: 0 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--cor-primary);
+    color: var(--cor-dark);
+    border-radius: 0.5rem;
+}
+
+
+.hero {
+    background-image: url("img/pizzadefundo.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    min-height: 75vh;
+    padding: 10rem;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Escurece a imagem */
+}
+
+.hero h1,
+.hero p,
+.hero .cta-button {
+    position: relative;
+    z-index: 2;
+    /* Garante que os textos fiquem acima do overlay */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.cta-button {
+    background-color: var(--cor-primary);
+    border-radius: .5rem;
+    color: var(--cor-dark);
+    padding: .75rem 1.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1.5rem;
+}
+
+section:not(#home) {
+    padding: 4rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.menu-list {
+    list-style: none;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+.menu-list>li {
+    background-color: var(--cor-light);
+    border-radius: .5rem;
+    box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 1);
+    display: inline-block;
+    margin: 1.5rem;
+    height: 26rem;
+    /* Defina um tamanho fixo para todas as caixas */
+    width: 25rem;
+    /* Ajuste a largura conforme necessário */
+    text-align: left;
+    overflow: hidden;
+    /* Garante que nada vaze para fora */
+
+}
+
+
+.menu-list img {
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    object-fit: cover;
+    width: 100%;
+    height: 200px
+}
+
+.menu-list h3,
+.menu-list p {
+    padding: 1rem 1.25rem 0;
+}
+
+#about {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url("img/pizzaassando2.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+}
+
+address {
+    margin: 2rem 0;
+}
+
+
+address>* {
+    display: inline-block;
+    margin: 1.5rem;
+    text-align: left;
+
+}
+
+footer {
+    color: var(--color-white);
+    background-color: var(--cor-dark);
+    text-align: center;
+}
+
+.menu-list>li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #ff8c00;
+    transform: scale(1.05);
+}
+
+.preco {
+    display: block;
+    background-color: var(--cor-primary);
+    color: var(--cor-dark);
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 1rem auto;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

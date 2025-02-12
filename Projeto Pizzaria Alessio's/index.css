@@ -145,13 +145,10 @@ p {
     box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 1);
     display: inline-block;
     margin: 1.5rem;
-    height: 26rem;
-    /* Defina um tamanho fixo para todas as caixas */
+    height: 26rem; /* Define um tamanho fixo para todas as caixas */
     width: 25rem;
-    /* Ajuste a largura conforme necessário */
     text-align: left;
-    overflow: hidden;
-    /* Garante que nada vaze para fora */
+    overflow: hidden; /* Garante que nada vaze para fora */
 
 }
 
